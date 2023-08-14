@@ -4,6 +4,7 @@
 #include <farplug-wide.h>
 #include <farkeys.h>
 #include <map>
+#include <string>
 #include "sqllng.h"
 #include "farapi.h"
 

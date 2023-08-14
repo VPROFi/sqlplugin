@@ -27,7 +27,7 @@ public:
 	int ProcessKey(HANDLE hPlugin, int key, unsigned int controlState, bool & change) override;
 	int GetFindData(struct PluginPanelItem **pPanelItem, int *pItemsNumber) override;
 	int DeleteFiles(struct PluginPanelItem *panelItem, int itemsNumber, int opMode) override;
-	void FreeFindData(struct PluginPanelItem * panelItem, int itemsNumber);
+	void FreeFindData(struct PluginPanelItem * panelItem, int itemsNumber) override;
  	explicit SqlitePanelDb(PanelIndex index_, std::unique_ptr<SQLiteDB> & db);
 	virtual ~SqlitePanelDb();
 };

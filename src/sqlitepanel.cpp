@@ -176,17 +176,17 @@ void SqlitePanel::EditSqlQuery(void)
 		DeleteFile(tmp_file_name.c_str());
 
 		//Remove BOM 
-		if (file_buff.size() > 2 && file_buff[0] == 0xef && file_buff[1] == 0xbb && file_buff[2] == 0xbf)	//UTF-8
+		if (file_buff.size() > 2 && file_buff[0] == (char)0xef && file_buff[1] == (char)0xbb && file_buff[2] == (char)0xbf)	//UTF-8
 			file_buff.erase(file_buff.begin(), file_buff.begin() + 3);
-		else if (file_buff.size() > 1 && file_buff[0] == 0xfe && file_buff[1] == 0xff)	//UTF-16 (BE)
+		else if (file_buff.size() > 1 && file_buff[0] == (char)0xfe && file_buff[1] == (char)0xff)	//UTF-16 (BE)
 			file_buff.erase(file_buff.begin(), file_buff.begin() + 2);
-		else if (file_buff.size() > 1 && file_buff[0] == 0xff && file_buff[1] == 0xfe)	//UTF-16 (LE)
+		else if (file_buff.size() > 1 && file_buff[0] == (char)0xff && file_buff[1] == (char)0xfe)	//UTF-16 (LE)
 			file_buff.erase(file_buff.begin(), file_buff.begin() + 2);
-		else if (file_buff.size() > 3 && file_buff[0] == 0x00 && file_buff[1] == 0x00 && file_buff[1] == 0xfe && file_buff[2] == 0xff)	//UTF-32 (BE)
+		else if (file_buff.size() > 3 && file_buff[0] == (char)0x00 && file_buff[1] == (char)0x00 && file_buff[1] == (char)0xfe && file_buff[2] == (char)0xff)	//UTF-32 (BE)
 			file_buff.erase(file_buff.begin(), file_buff.begin() + 4);
-		else if (file_buff.size() > 3 && file_buff[0] == 0x00 && file_buff[1] == 0x00 && file_buff[1] == 0xff && file_buff[2] == 0xfe)	//UTF-32 (LE)
+		else if (file_buff.size() > 3 && file_buff[0] == (char)0x00 && file_buff[1] == (char)0x00 && file_buff[1] == (char)0xff && file_buff[2] == (char)0xfe)	//UTF-32 (LE)
 			file_buff.erase(file_buff.begin(), file_buff.begin() + 4);
-		else if (file_buff.size() > 3 && file_buff[0] == 0x2b && file_buff[1] == 0x2f)	//UTF-7
+		else if (file_buff.size() > 3 && file_buff[0] == (char)0x2b && file_buff[1] == (char)0x2f)	//UTF-7
 			file_buff.erase(file_buff.begin(), file_buff.begin() + 4);
 		if (file_buff.empty())
 			return;

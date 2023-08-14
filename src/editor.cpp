@@ -354,7 +354,7 @@ bool editor::exec_update(const char* row_id, const std::vector<field>& db_data) 
 		if (it->column.type == SQLiteDB::ct_float)
 			bind_rc = stmt.bind(idx, std::atof(it->value.c_str()));
 		else if (it->column.type == SQLiteDB::ct_integer)
-			bind_rc = stmt.bind(idx, reinterpret_cast<const sqlite3_int64>(std::atoll(it->value.c_str())));
+			bind_rc = stmt.bind(idx, static_cast<const sqlite3_int64>(std::atoll(it->value.c_str())));
 		else
 			bind_rc = stmt.bind(idx, it->value.c_str());
 		if (bind_rc != SQLITE_OK) {

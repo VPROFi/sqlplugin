@@ -28,7 +28,7 @@ private:
 
 public:
         // validate file
-	bool Valid(void);
+	bool Valid(void) override;
 
 	int ProcessKey(HANDLE hPlugin, int key, unsigned int controlState, bool & change) override;
 	int GetFindData(struct PluginPanelItem **pPanelItem, int *pItemsNumber) override;
