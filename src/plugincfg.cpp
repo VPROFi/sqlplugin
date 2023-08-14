@@ -100,10 +100,8 @@ void PluginCfg::ReloadPanelKeyBar(struct PanelData * data, PanelIndex index)
 
 void PluginCfg::ReloadPanelString(struct PanelData * data, PanelIndex index)
 {
-	assert( def.find(index) != def.end() );
-
 	ReloadPanelKeyBar(data, index);
-
+	auto & cfg = def[index];
 	data->openInfo.Format=(TCHAR*)GetMsg(cfg.format);
 	data->openInfo.PanelTitle=(TCHAR*)GetMsg(cfg.panelTitle);
 }
