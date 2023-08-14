@@ -1,0 +1,62 @@
+.Language=English,English
+
+""
+""
+"SQL plugin"
+"SQL plugin"
+"SQLite: "
+"sqlite"
+
+"Refresh"
+"Change"
+"Create"
+
+"DDL"
+"Export"
+"SQL"
+
+"Pragma"
+
+"Ok"
+"Cancel"
+
+"SQL plugin configuration "
+"Add to &Disks menu"
+"Add to &Plugins menu"
+"Enable &log:"
+
+"SQL plugin settings"
+"&Save SQL plugin settings"
+
+"SQLite database editor"
+"SQLite"
+"SQLite DDL: "
+"SQLite PRAGMA statements"
+
+"Add to the panel plugin menu"
+"Prefix:"
+
+"Name"
+"Type"
+"Count"
+
+"Reading database..."
+"Executing SQL query..."
+
+"Insert row"
+"Edit row"
+"Drop selected items?"
+"SQLite: Data export"
+"Export %s to:"
+"File format:"
+"Text"
+"Export"
+
+"Unable to open database"
+"Error reading database"
+"Error executing SQL query"
+"Error reading file"
+"Error writing file"
+
+"Save"
+"Cancel"
