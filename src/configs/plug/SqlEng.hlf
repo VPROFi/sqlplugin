@@ -1,5 +1,5 @@
 .Language=English,English
-.PluginContents=Panel for configuring network interfaces and routes
+.PluginContents=SQL Panel
 
 @Contents
 $ #Panel SQL#

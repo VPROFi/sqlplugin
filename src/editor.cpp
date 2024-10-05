@@ -134,7 +134,7 @@ bool editor::edit(std::vector<field>& db_data, const bool create_mode) const
 	//Calculate dialog's size
 	size_t max_wnd_width = 80;
 	SMALL_RECT rc_far_wnd;
-	if( Plugin::psi.AdvControl(Plugin::psi.ModuleNumber, ACTL_GETFARRECT, &rc_far_wnd) )
+	if( Plugin::psi.AdvControl(Plugin::psi.ModuleNumber, ACTL_GETFARRECT, &rc_far_wnd, 0) )
 		max_wnd_width = rc_far_wnd.Right + 1;
 	size_t max_label_length = 0;
 	size_t max_value_length = 0;
