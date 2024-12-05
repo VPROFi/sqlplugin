@@ -355,8 +355,9 @@ std::wstring exporter::get_temp_file_name(const wchar_t* ext)
 	std::wstring tmp_file_name = L"sqlite.tmp";
 
 	wchar_t tmp_name[MAX_PATH];
-	if (GetTempFileName(L"/tmp", L"sql", 0, tmp_name))
-		tmp_file_name = tmp_name;
+
+	if (Plugin::FSF.MkTemp(tmp_name, MAX_PATH, L"sql"))
+ 		tmp_file_name = tmp_name;
 
 	if (ext && ext[0]) {
 		tmp_file_name += L'.';
